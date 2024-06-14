@@ -13,3 +13,15 @@ function startCarousel(){
     }
     let intervalId = setInterval(cycleImages, 3000)
 }
+//Handle Erros from server if unable to write data (optional)
+function checkForError() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+      alert("Validation failed. Name and description are required.");
+    }
+  }
+
+  window.onload = function(){
+    startCarousel();
+    checkForError()
+  }

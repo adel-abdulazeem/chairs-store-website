@@ -1,15 +1,11 @@
-<header>
     <%- include('./partials/logged-in-header') %>
-    <h1>Item Page</h1>
-</header>
-        <h1>Cart Tab</h1>
     <div class="cartTab">
         <h1>Shopping Cart</h1>
         <div class="listCart">
                     <% for(let i=0; i < selectedItems.length; i++) {%>
                         <div class="item">
                             <div class="image">
-                                <img src="<%= `/img/${selectedItems[i].image}`%>" alt="">
+                                <img src="<%= `/imgs/${selectedItems[i].image}`%>" alt="">
                             </div>
                             <div class="name"><%= selectedItems[i].name %></div>
                             <div class="totalPrice"><%= selectedItems[i].price %></div>
@@ -38,13 +34,19 @@
             <% for(let i=0; i < selectedItems.length; i++) {%>
                     <% total +=selectedItems[i].count * selectedItems[i].price %>
                     <% } %>
-                 <button class="close">
-                    <span>total: <%= total %>$</span>
-                </button>
-
-            <button class="checkOut">
-                <a href="/cart/checkout">Check Out</a> 
-            </button>
+        </div>
+        <div>
+            <span>total: <%= total %>$</span>
         </div>
     </div>
+    <div class="cartBtn">
+        <button type="button" class="btn btn-lg btn-outline-primary">
+            <a href="/menu">Back To Shopping</a> 
+        </button>
+        <button type="button" class="btn  btn-lg btn-primary">
+            <a href="/cart/checkout">Check Out</a> 
+        </button>
+    </div>
+
+
     <%- include('./partials/footer') %>

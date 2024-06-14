@@ -1,0 +1,29 @@
+<% if (user) { %>
+    <%- include('./partials/logged-in-header') %>
+<% } else { %>
+    <%- include('./partials/header') %>   
+<% } %>
+    <header>
+        <h1>Menu Page</h1>
+    </header>
+        <ul class="menuItems">
+            <div class="listProduct">
+                <% for(let i=0; i < chairs.length; i++) {%>
+                    <div class="item">
+                        <a href=""><img src="<%= `/img/${chairs[i].image}`%>" alt="">
+                        </a>
+                        <h2><%= chairs[i].name %></h2>
+                        <div class="price"><%= chairs[i].price %></div>
+                        <!-- adding Item to cart -->
+                        <div class="mt-5">
+                            <form action="/cart/addToCart/<%= chairs[i].name %>" method="POST">
+                                <button class="btn btn-primary" type="submit">Add To Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </ul>
+    
+     <%- include('./partials/footer') %>
+    

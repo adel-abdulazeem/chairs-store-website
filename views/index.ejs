@@ -1,0 +1,23 @@
+
+    <% if (user) { %>
+        <%- include('./partials/logged-in-header') %>
+    <% } else { %>
+        <%- include('./partials/header') %>   
+    <% } %>
+<main class="container">
+        <!-- <button id="add" type="submit">Add Item to db</button> -->
+        <div>
+            <a href="/menu/insert" > Add Data</a>
+          </div>
+          
+    <div class="row justify-content-around mt-5">
+        <div id="carousel">
+            <img src="/imgs/kitten.jpg" class="active">
+            <img src="/imgs/kitten2.jpg">
+            <img src="/imgs/kitten3.jpg" >
+        </div>
+    </div>
+</main>
+    
+
+<%- include('partials/footer') -%>

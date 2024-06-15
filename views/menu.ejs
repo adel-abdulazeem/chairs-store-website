@@ -16,8 +16,8 @@
                         <div class="price"><%= chairs[i].price %></div>
                         <!-- adding Item to cart -->
                         <div class="mt-2 d-grid gap-3">
-                            <form action="/cart/addToCart/<%= chairs[i].name %>" method="POST">
-                                <button class="btn p-2 btn-primary btn-sm" type="submit">Add To Cart</button>
+                            <form  action="/cart/addToCart/<%= chairs[i].name %>" method="POST">
+                                <button class="btn p-2 btn-primary btn-sm mb-2" type="submit">Add To Cart</button>
                                 <button class="btn btn-outline-primary btn-sm ms-2" type="submit">Item Details</button>
                             </form>
                         </div>

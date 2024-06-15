@@ -59,7 +59,6 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use('/menu', menuRoute)
 app.use('/cart', cartRoute)
-
 app.use("/post", postRoutes);
 
 //Server Running

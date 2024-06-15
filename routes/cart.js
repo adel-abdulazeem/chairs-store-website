@@ -7,6 +7,8 @@ const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', ensureAuth, cartController.getCartItems)
 
+const countController = require('../controllers/cartCount');
+router.use(countController.computeCartItemCount);
 
 //Admin feature to add menu items to website 
 router.post('/addToCart/:name', ensureAuth, cartController.addToCart)

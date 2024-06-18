@@ -10,8 +10,7 @@ module.exports = {
               {
                   $match: { userId: req.user.id }
                   },
-              {
-
+                {
                   $group: {
                     _id: "$name", // Group by the 'name' field
                     doc: { $first: "$$ROOT" }, // Get the first document in each group
@@ -39,7 +38,7 @@ module.exports = {
                 }
             ]);
           //   console.log('Count of documents by age:', selectedItems);
-          res.render('checkout', {selectedItems})
+          res.render('submitOrder', {selectedItems})
         } catch (err) {
           console.log(err);
         }

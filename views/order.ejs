@@ -1,0 +1,34 @@
+<%- include('./partials/logged-in-header') %>
+<div class="cartTab">
+    <h1>Your Orders</h1>
+    <div class="listCart">
+        <% for(let i=0; i < orderedItem.length; i++) {%>
+            <div class="item">
+                <div class="image">
+                    <img src="<%= `/imgs/${orderedItem[i].image}`%>" alt="">
+                </div>
+                <div class="name"><%= orderedItem[i].name %></div>
+                <div class="totalPrice"><%= orderedItem[i].price %></div>
+                <div class="quantity">
+                    <span ><%= orderedItem[i].count %></span>
+                </div>
+            </div>
+    <% } %>
+    </div>
+    
+    <div class="btn">
+        <% let total = 0 %>
+        <% for(let i=0; i < orderedItem.length; i++) {%>
+                <% total +=orderedItem[i].count * orderedItem[i].price %>
+                <% } %>
+    </div>
+    <div>
+        <span>total: <%= total %>$</span>
+    </div>
+</div>
+<div class="cartBtn">
+    <button type="button" class="btn btn-lg btn-outline-primary">
+        <a href="/menu">Back To Menu</a> 
+    </button>
+</div>
+<%- include('./partials/footer') %>

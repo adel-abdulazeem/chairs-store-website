@@ -41,29 +41,30 @@
 </div>
 </div>
         <section class="col-6 mt-5">
-            <form action="/" method="POST">
+            <form action="/order/submitOrder" method="POST">
                 <div class="mb-3">
-                    <label for="userName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="userName" name="userName">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
                     <label for="userName" class="form-label">Second Name</label>
-                    <input type="text" class="form-control" id="userName" name="userName">
+                    <input type="text" class="form-control" id="userName" name="secondName" required>
                   </div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Location address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                  <label for="location" class="form-label">Location</label>
+                  <input type="text" class="form-control" id="location" name="location" required>
                 <div class="mb-3">
                   <label for="password" class="form-label">Phone Number</label>
-                  <input type="phone" class="form-control" id="pohone_num" name="password">
+                  <input type="phone" class="form-control" id="password" name="phoneNo" required>
                 </div>
+                <button type="submit" class="btn btn-primary" value="Upload">Send Order</button>
               </form>
         </section>
     </div>
 </main>
 
     <div class="cartBtn">
-        <button type="button" class="btn btn-lg btn-outline-primary">Back To Cart</button>
-        <button type="button" class="btn  btn-lg btn-primary">
-            <a href="/cart/order">Send Order </a> 
+        <button type="button" class="btn btn-lg btn-outline-primary">
+          <a href="/cart">Back To Cart</a> 
+
         </button>
     </div>
 

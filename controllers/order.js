@@ -1,5 +1,6 @@
-const CartItems = require('../models/cartItems')
 const Order = require('../models/Order')
+
+const CartItems = require('../models/cartItems')
 
 module.exports = {
   getOrder: async (req, res) => {
@@ -37,7 +38,8 @@ module.exports = {
                 }
               }
           ]);
-        //   console.log('Count of documents by age:', selectedItems);
+          const order = await Order.find({userId: req.user.id}).populate('items')
+          console.log( order);
         res.render('order', {orderedItem})
     } catch(err){
         console.log(err)
@@ -92,4 +94,3 @@ module.exports = {
           }
       },
 }
-

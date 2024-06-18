@@ -13,7 +13,7 @@
                         <a href=""><img src="<%= `/imgs/${chairs[i].image}`%>" alt="">
                         </a>
                         <h2><%= chairs[i].name %></h2>
-                        <div class="price"><%= chairs[i].price %></div>
+                        <div class="price"><%= chairs[i].price %>$</div>
                         <!-- adding Item to cart -->
                         <div class=" mt-2 d-grid gap-3">
                             <form  action="/cart/addToCart/<%= chairs[i].name %>" method="POST">

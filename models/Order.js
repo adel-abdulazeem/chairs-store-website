@@ -7,17 +7,17 @@ const orderSchema = new mongoose.Schema({
     items: {
         type: Array,
         required: true
-    },
+          },
     phoneNo: {
         type: String,
         required: true
     },
     itemsCount: {
-        type: Number, 
+        type: String, 
         required: true
     },
     total: {
-        type: Number,
+        type: String,
         required: true
     },
     location: {
@@ -25,8 +25,8 @@ const orderSchema = new mongoose.Schema({
         required: true
     },
     userId: {
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
       },
     createdAt: {
         type: Date,

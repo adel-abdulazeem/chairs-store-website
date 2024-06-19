@@ -12,11 +12,13 @@ const cartSchema = new mongoose.Schema({
     image: {
         type: String
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+    userId: {
+        type: String,
+        required: true
       },
-    }, {
+      items: [{ type: Schema.Types.ObjectId, ref: 'Item' }]
+      //makes add and plus work adn adding items to the cart
+}, {
     collection: "cartItems"
 })
 

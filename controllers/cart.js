@@ -88,9 +88,10 @@ module.exports = {
         }
     },
     addToCart: async (req,res) => {
-      const item = await MenuItems.findOne({name: req.params.name});
-      const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
       try{
+
+        const item = await MenuItems.findOne({name: req.params.name});
+        const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
           await newItem.save()
           res.redirect('/menu')
       } catch(err) {
@@ -98,9 +99,11 @@ module.exports = {
       }
   },
     incrementItem: async (req,res) => {
-      const item = await MenuItems.findOne({name: req.params.name});
-      const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
+
         try{
+          const item = await MenuItems.findOne({name: req.params.name})
+          console.log(req.params.name)
+          const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
             await newItem.save()
             res.redirect('/cart')
         } catch(err) {

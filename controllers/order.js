@@ -39,7 +39,7 @@ module.exports = {
               }
           ]);
           const order = await Order.find({userId: req.user.id}).populate('items')
-          console.log( order);
+          // console.log( order);
         res.render('order', {orderedItem})
     } catch(err){
         console.log(err)
@@ -88,6 +88,7 @@ module.exports = {
               location: req.body.location,
               userId: req.user.id,
             });
+            
             res.redirect('/order')
           } catch(err) {
               res.redirect('/cart?error=true')

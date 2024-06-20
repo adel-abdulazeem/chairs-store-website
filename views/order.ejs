@@ -2,29 +2,34 @@
 <div class="cartTab">
     <h1>Your Orders</h1>
     <div class="listCart">
-        <% for(let i=0; i < orderedItem.length; i++) {%>
-            <div class="item">
-                <div class="image">
-                    <img src="<%= `/imgs/${orderedItem[i].image}`%>" alt="">
-                </div>
-                <div class="name"><%= orderedItem[i].name %></div>
-                <div class="totalPrice"><%= orderedItem[i].price %></div>
+        <% items.forEach( (el) => {%>
+            <% el.forEach( (el) => {%>
+            <div class="order">
+                <div class="name"><%= el.name %></div>
+                <div class="totalPrice"><%= el.price %></div>
                 <div class="quantity">
-                    <span ><%= orderedItem[i].count %></span>
+                    <span ><%= el.count %></span>
                 </div>
-            </div>
-    <% } %>
-    </div>
+            </div> 
+            <% })%>
+    <% })%>
+</div>
+
+<div class="btn">
+<% let total = 0 %>
+<% items.forEach( (el) => {%>
+    <% el.forEach( (el) => {%>
+        <% total +=el.count * el.price %>
+        <% } )%>
+        <% } )%>
+</div>
+<div class="d-flex justify-content-center">
+<h4>total: <%= total %>$</h4>
+</div>
+</div>
     
-    <div class="btn">
-        <% let total = 0 %>
-        <% for(let i=0; i < orderedItem.length; i++) {%>
-                <% total +=orderedItem[i].count * orderedItem[i].price %>
-                <% } %>
-    </div>
-    <div>
-        <span>total: <%= total %>$</span>
-    </div>
+
+
 </div>
 <div class="cartBtn">
     <button type="button" class="btn btn-lg btn-outline-primary">

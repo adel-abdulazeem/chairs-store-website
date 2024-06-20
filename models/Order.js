@@ -1,4 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const CartItem = require('./CartItem');
+
 const Schema = mongoose.Schema;
 
 const orderSchema = new mongoose.Schema({
@@ -6,10 +8,13 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    items: [{ type: Schema.Types.ObjectId, ref: 'CartItems' }],
-
+    items: { 
+        type: Object,
+        ref: 'CartItem'
+        }
+    ,
     phoneNo: {
-        type: String,
+        type: Number,
         required: true
     },
     itemsCount: {
@@ -17,7 +22,7 @@ const orderSchema = new mongoose.Schema({
         required: true
     },
     total: {
-        type: String,
+        type: Number,
         required: true
     },
     location: {

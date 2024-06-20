@@ -1,6 +1,6 @@
 const { name } = require('ejs');
-const CartItems = require('../models/cartItems')
-const MenuItems = require('../models/MenuItems')
+const CartItems = require('../models/CartItem')
+const MenuItems = require('../models/MenuItem')
 
 
 module.exports = {

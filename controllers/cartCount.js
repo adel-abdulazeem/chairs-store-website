@@ -1,4 +1,4 @@
-const CartItems = require('../models/cartItems')
+const CartItems = require('../models/CartItem')
 
 async function computeCartItemCount(req, res, next) {
     try {

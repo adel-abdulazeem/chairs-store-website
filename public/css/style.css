@@ -261,6 +261,15 @@ body.activeTabCart .container{
     text-align: center;
     align-items: center;
 }
+/* added class to align items in the order page */
+.listCart .order{
+    display: grid;
+    grid-template-columns: 200px 150px 50px 1fr;
+    height: 70px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
 .listCart .quantity span{
     display: inline-block;
     width: 25px;
@@ -282,8 +291,9 @@ body.activeTabCart .container{
 .listCart .item:nth-child(even){
     background-color: #eee1;
 }
-
-
+.listCart .order:nth-child(even){
+    background-color: #eee1;
+}
 
 /* responsive */
 @media only screen and (max-width: 992px) {

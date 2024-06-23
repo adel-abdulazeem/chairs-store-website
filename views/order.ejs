@@ -4,9 +4,13 @@
     <div class="listCart">
         <% items.forEach( (el) => {%>
             <% el.forEach( (el) => {%>
-            <div class="order">
+            <div class="item order">
+
                 <div class="name"><%= el.name %></div>
-                <div class="totalPrice"><%= el.price %></div>
+                <div class="image">
+                    <img src="<%= `/imgs/${el.image}`%>" alt="">
+                </div>
+                <div class="totalPrice"><%= el.price %>$</div>
                 <div class="quantity">
                     <span ><%= el.count %></span>
                 </div>

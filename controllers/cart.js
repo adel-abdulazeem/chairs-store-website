@@ -38,6 +38,7 @@ module.exports = {
                 }
             ]);
           //   console.log('Count of documents by age:', selectedItems);
+          console.log(selectedItems)
           res.render('submitOrder', {selectedItems})
         } catch (err) {
           console.log(err);
@@ -45,11 +46,10 @@ module.exports = {
       },
     getCartItems: async (req, res) => {
         try{
-
             const selectedItems = await CartItems.aggregate([
                 {
                     $match: { userId: req.user.id }
-                    },
+                  },
                 {
 
                     $group: {

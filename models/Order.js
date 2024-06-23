@@ -10,7 +10,7 @@ const orderSchema = new mongoose.Schema({
     },
     items: { 
         type: Object,
-        ref: 'CartItem'
+        ref: 'MenuItem'
         }
     ,
     phoneNo: {

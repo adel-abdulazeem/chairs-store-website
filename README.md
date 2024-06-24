@@ -1,6 +1,6 @@
 # My Awesome Project
 Full-Stack webstite of Chairs store that gives the clients to scroll list of the store products they can see the image, price of each product.
-The Website comes with the feature of online ordering each user can sign-up to be able to put items in the cart then submit his/her contact data and address data setting where to receive and deliver his/her order
+The Website comes with the feature of online ordering each user can sign-up to be able to put items in the cart then submit his/her contact data and address data clarifying where to receive or deliver his/her order
 
 ![chairswebsite](https://github.com/adelnasr029/100hr-project/assets/108176783/bb4cd966-e284-4fd1-8921-e6c8928522d0)
 

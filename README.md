@@ -4,7 +4,7 @@ The Website comes with the feature of online ordering each user can sign-up to b
 
 ![chairswebsite](https://github.com/adelnasr029/100hr-project/assets/108176783/bb4cd966-e284-4fd1-8921-e6c8928522d0)
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+**Link to project:** https://chairs-store-website.onrender.com/
 
 ![alt tag](http://placecorgi.com/1200/650)
 

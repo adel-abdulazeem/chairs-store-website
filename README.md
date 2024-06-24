@@ -1,10 +1,10 @@
 # My Awesome Project
 Full-Stack webstite of Chairs store that gives the clients to scroll list of the store products they can see the image, price of each product.
-The Website comes with the feature of online ordering each user can sign-up to be able to put items in the cart then submit his/her contact data and address data setting where to receive and deliver his/her order
+The Website comes with the feature of online ordering each user can sign-up to be able to put items in the cart then submit his/her contact data and address data clarifying where to receive or deliver his/her order
 
 ![chairswebsite](https://github.com/adelnasr029/100hr-project/assets/108176783/bb4cd966-e284-4fd1-8921-e6c8928522d0)
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+**Link to project:** https://chairs-store-website.onrender.com/
 
 ![alt tag](http://placecorgi.com/1200/650)
 
@@ -12,10 +12,8 @@ The Website comes with the feature of online ordering each user can sign-up to b
 
 **Tech used:** Node.js, Express, MongoDB, EJS, HTML, CSS, JavaScript
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
-
 ## Optimizations
-There's still the show details functionality I'm working on to give the user the ability to see much more details about each product and enables the store owner to show the details they like to show about each of their products.
+There's still the show details functionality I'm working on to give the user the ability to see much more details about each product and enables the store owner to show the details they like to show about each of their products. and the functionality that gives the ability to track each user's order.
 Planing to refactor it later by adding React components to make the UI much more responsive and UX much more faster and also functions efficiently as much as it is possible in the final product
 
 

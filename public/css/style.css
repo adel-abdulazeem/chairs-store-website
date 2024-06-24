@@ -264,7 +264,7 @@ body.activeTabCart .container{
 /* added class to align items in the order page */
 .listCart .order{
     display: grid;
-    grid-template-columns: 200px 150px 50px 1fr;
+    grid-template-columns: 200px 70px 50px 1fr;
     height: 70px;
     gap: 10px;
     text-align: center;

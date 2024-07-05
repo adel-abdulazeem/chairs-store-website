@@ -10,7 +10,6 @@ const orderSchema = new mongoose.Schema({
     },
     items: { 
         type: Object,
-        ref: 'MenuItem'
         }
     ,
     phoneNo: {
@@ -29,6 +28,10 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    completed: {
+        type: Boolean,
+        required: true,
+      },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",

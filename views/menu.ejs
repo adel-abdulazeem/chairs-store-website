@@ -15,16 +15,43 @@
                         <h2><%= chairs[i].name %></h2>
                         <div class="price"><%= chairs[i].price %>$</div>
                         <!-- adding Item to cart -->
-                        <div class="mt-2 d-grid gap-3 text-center">
+                        <div  class="d-grid gap-2 d-md-flex justify-content-center flex-column flex-sm-row" >
                             <form  action="/cart/addToCart/<%= chairs[i].name %>" method="POST">
-                                <button class="btn btn-primary btn-sm mb-2" type="submit">Add To Cart</button>
-                                <button class="btn btn-outline-primary btn-sm mb-2" type="submit">Item Details</button>
+                                <button class="btn btn-primary btn-sm " type="submit">Add To Cart</button>
                             </form>
+                            <!-- Button trigger modal -->
+                                <button onclick="showDetails('<%= chairs[i]._id %>')" class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" 
+                                data-bs-target="#staticBackdrop">
+                                 Item Details
+                                 </button>
                         </div>
                     </div>
+                    
                 <% } %>
             </div>
         </ul>
-    
-     <%- include('./partials/footer') %>
+  
+  <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="detailImage" class="d-flex justify-content-center">
+                </div>
+                <div id="details">
+                
+                </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<%- include('./partials/footer') %>
     

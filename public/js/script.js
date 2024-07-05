@@ -21,7 +21,28 @@ function checkForError() {
     }
   }
 
-  window.onload = function(){
-    startCarousel();
-    checkForError()
-  }
+
+// function that inserts data in the modal or Pop-Up window
+  async function showDetails(id){
+    console.log(id)
+    try{
+      document.querySelector('#detailImage').innerHTML = ''
+        const response = await fetch(`/menu/showDetails/${id}`)
+        const data = await response.json()
+
+        let img = document.createElement('img')
+        img.srcset = `/imgs/${data.image}`
+        img.setAttribute("style", "width: 75%")
+        document.querySelector('#detailImage').appendChild(img)
+        document.querySelector('#staticBackdropLabel').innerHTML = data.name
+        document.querySelector('#details').innerHTML = data.detail
+
+    } catch(err){
+        console.log(err)
+    }
+}
+
+window.onload = function(){
+  startCarousel();
+  checkForError()
+}

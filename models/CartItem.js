@@ -12,7 +12,9 @@ const cartSchema = new mongoose.Schema({
     image: {
         type: String
     },
-
+    count: {
+        type: Number
+    },
     userId: {
         type: String,
         required: true

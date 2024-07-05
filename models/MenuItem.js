@@ -10,6 +10,9 @@ const menuSchema = new mongoose.Schema({
     },
     image: {
         type: String
+    },
+    detail: {
+        type: String
     }
 }, {
     collection: "menuItems"

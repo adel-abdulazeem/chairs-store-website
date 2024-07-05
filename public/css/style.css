@@ -64,7 +64,7 @@
   }
   
   ul, ol {
-    margin-left: 15px;
+    margin-right: 20px;
   }
   
   blockquote {
@@ -242,14 +242,7 @@ body.activeTabCart .container{
     letter-spacing: 3px;
     font-size: small;
 }
-/* .listProduct .item button{
-    background-color: #353432;
-    color: #eee;
-    border: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border-radius: 20px;
-} */
+
 /* listCart */
 .listCart .item img{
     width: 100%;
@@ -294,6 +287,7 @@ body.activeTabCart .container{
 .listCart .order:nth-child(even){
     background-color: #eee1;
 }
+
 
 /* responsive */
 @media only screen and (max-width: 992px) {

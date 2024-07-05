@@ -12,13 +12,13 @@
                             <div class="totalPrice"><%= selectedItems[i].price %></div>
                             <div class="quantity">
                                 
-                                <form  action="/cart/delete/<%=selectedItems[i]._id%>?_method=DELETE" method="POST">
+                                <form  action="/cart/delete/<%=selectedItems[i]._id%>?_method=PUT" method="POST">
                                     <button type="submit" style="width:30px" class="btn btn-primary fa fa-minus btn-sm"></button>
                                   </form>
 
                                 <span ><%= selectedItems[i].count %></span>
 
-                                <form  action="/cart/increment/<%=selectedItems[i].name%>" method="POST">
+                                <form  action="/cart/increment/<%=selectedItems[i]._id%>?_method=PUT" method="POST">
                                         <button type="submit" style="width:30px" class="btn btn-primary fa fa-plus btn-sm"></button>
                                       </form>
 

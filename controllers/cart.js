@@ -2,7 +2,6 @@ const { name } = require('ejs');
 const CartItems = require('../models/CartItem')
 const MenuItems = require('../models/MenuItem')
 
-
 module.exports = {
     getOrder: async (req, res) => {
         try {
@@ -38,7 +37,6 @@ module.exports = {
                 }
             ]);
           //   console.log('Count of documents by age:', selectedItems);
-          console.log(selectedItems)
           res.render('submitOrder', {selectedItems})
         } catch (err) {
           console.log(err);
@@ -55,7 +53,7 @@ module.exports = {
                     $group: {
                       _id: "$name", // Group by the 'name' field
                       doc: { $first: "$$ROOT" }, // Get the first document in each group
-                      count: { $sum: 1 } // Count the number of documents in each group
+                      total: { $sum: 1 } // Count the number of documents in each group
                     }
                   },
                   {
@@ -65,7 +63,7 @@ module.exports = {
                       name: "$doc.name", // Include other fields from doc
                       price: "$doc.price",
                       image: "$doc.image", // Include image field
-                      count: "$count" // Include the count field
+                      count: "$doc.count" // Include the count field
                     }
                   },
                   
@@ -91,7 +89,13 @@ module.exports = {
       try{
 
         const item = await MenuItems.findOne({name: req.params.name});
-        const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
+        const newItem =  new CartItems({
+          name: item.name,
+          price: item.price,
+          image: item.image,
+          count: 1,
+          userId: req.user.id
+            })
           await newItem.save()
           res.redirect('/menu')
       } catch(err) {
@@ -99,33 +103,38 @@ module.exports = {
       }
   },
     incrementItem: async (req,res) => {
-
-        try{
-          const item = await MenuItems.findOne({name: req.params.name})
-          console.log(req.params.name)
-          const newItem =  new CartItems({name: item.name, price: item.price, image: item.image, userId: req.user.id})
-            await newItem.save()
+          try {
+            await CartItems.findOneAndUpdate(
+              { _id: req.params.id },
+              {
+                $inc: { count: 1 },
+              }
+            );
+            console.log("item +1");
             res.redirect('/cart')
         } catch(err) {
             res.redirect('/cart?error=true')
         }
     },
     deleteCartItem: async (req, res) => {
-        const {id} = req.params 
         try {
-            await CartItems.findByIdAndDelete(id)
-            res.redirect('/cart')
+          await CartItems.findOneAndUpdate(
+            { _id: req.params.id },
+            { $inc: { count: -1 } }
+          );
+          console.log("item +1");
+          res.redirect('/cart')
         } catch(err) {
             res.redirect('/item?error=true')
         }
      },
-     deleteItem: async (req, res) => {
+    deleteItem: async (req, res) => {
       const {name} = req.params 
       try {
-          await CartItems.deleteMany({name: name})
-        console.log("Deleted Post");
-        res.redirect("/cart");
-      } catch (err) {
+            await CartItems.deleteMany({name: name})
+            console.log("Deleted Post");
+            res.redirect("/cart");
+          } catch (err) {
         res.redirect("/cart");
       }
     }

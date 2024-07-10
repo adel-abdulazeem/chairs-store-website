@@ -9,8 +9,8 @@ router.get('/',  cartController.getCartItems)
 router.post('/addToCart/:name', ensureAuth, cartController.addToCart)
 router.get('/submitOrder', cartController.getOrder)
 router.put('/increment/:id', cartController.incrementItem)
-router.put('/delete/:id', cartController.deleteCartItem)
-router.delete('/deleteBtn/:name', cartController.deleteItem)
+router.put('/delete/:id', cartController.decreaseItem)
+router.delete('/deleteBtn/:id', cartController.deleteItem)
 
 module.exports = router 
 

@@ -12,20 +12,20 @@
                     <div class="name"><%= selectedItems[i].name %></div>
                     <div class="totalPrice"><%= selectedItems[i].price %></div>
                     <div class="quantity">
-                        
-                        <form  action="/cart/delete/<%=selectedItems[i]._id%>?_method=DELETE" method="POST">
-                            <button type="submit" style="width:30px" class="btn btn-primary fa fa-minus btn-sm"></button>
+                      <% if (selectedItems[i].count == 1) { %>
+                        <form action="/submitOrder/deleteBtn/<%=selectedItems[i]._id%>?_method=DELETE" method="POST">
+                            <button  class="btn btn-primary fa fa-trash btn-sm" type="submit" style="width:30px"></button>
                           </form>
-
+                    <% } else { %>
+                      <form  action="/submitOrder/delete/<%=selectedItems[i]._id%>?_method=PUT" method="POST">
+                        <button type="submit" style="width:30px" class="btn btn-primary fa fa-minus btn-sm"></button>
+                      </form>
+                    <% } %>
                         <span ><%= selectedItems[i].count %></span>
 
-                        <form  action="/cart/increment/<%=selectedItems[i].name%>" method="POST">
+                        <form  action="/submitOrder/increment/<%=selectedItems[i]._id%>?_method=PUT" method="POST">
                                 <button type="submit" style="width:30px" class="btn btn-primary fa fa-plus btn-sm"></button>
-                              </form>
-
-                        <form action="/cart/deleteBtn/<%=selectedItems[i].name%>?_method=DELETE" method="POST">
-                        <button  class="btn btn-primary fa fa-trash btn-sm" type="submit" style="width:30px"></button>
-                      </form>
+                        </form>
                     </div>
                 </div>
         <% } %>
@@ -50,10 +50,10 @@
                   </div>
                 <div class="mb-3">
                   <label for="location" class="form-label">Location</label>
-                  <input type="text" class="form-control" id="location" name="location" placeholder="Enter the place where to receive" required>
+                  <input type="text" class="form-control" id="location" name="location" placeholder="Enter Your Location" required>
                 <div class="mb-3">
                   <label for="password" class="form-label">Phone Number</label>
-                  <input type="phone" class="form-control" id="password" name="phoneNo" placeholder="To contact when order is done" required>
+                  <input type="phone" class="form-control" id="password" name="phoneNo" placeholder="Enter Your Phone No" required>
                 </div>
                 <button type="submit" class="btn btn-primary" value="Upload">Send Order</button>
               </form>

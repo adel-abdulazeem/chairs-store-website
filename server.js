@@ -11,8 +11,8 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const menuRoute = require('./routes/menu')
 const cartRoute = require('./routes/cart')
+const submitOrderRoute = require('./routes/submitOrder')
 const orderRoute = require('./routes/order')
-
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
@@ -60,7 +60,7 @@ app.use("/", mainRoutes);
 app.use('/menu', menuRoute)
 app.use('/cart', cartRoute)
 app.use('/order', orderRoute)
-
+app.use('/submitOrder', submitOrderRoute)
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");

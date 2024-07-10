@@ -1,4 +1,3 @@
-const { render } = require('ejs')
 const MenuItems = require('../models/MenuItem')
 
 module.exports = {
@@ -40,13 +39,6 @@ module.exports = {
                             "image": "3.png",
                             "detail": 'typically designed for one person and consisting of one or more legs, a flat or slightly angled seat and a back-rest'
                         },
-                        {
-                             "id": 3,
-                            "name":" LD03 LOUNGE CHAIR",
-                            "price": 290,
-                            "image": "3.png",
-                            "detail": 'typically designed for one person and consisting of one or more legs, a flat or slightly angled seat and a back-rest'
-                             },
                         {
                             "id": 4,
                             "name":" LD04 LOUNGE CHAIR",

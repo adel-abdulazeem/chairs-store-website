@@ -1,8 +1,5 @@
 # My Awesome Project
-Full-Stack webstite of Chairs store that gives the clients to scroll list of the store products they can see the image, price of each product.
-The Website comes with the feature of online ordering each user can sign-up to be able to put items in the cart then submit his/her contact data and address data clarifying where to receive or deliver his/her order. on top of that the show details functionality to give the user the ability to see much more details about each product and enables the store owner to show the details they like to show about each of their products.
-Order tracking functionality that indicates the status of each user's order.
-Planing to refactor it later by adding React components to make the UI much more responsive and UX much more faster and also functions efficiently as much as it is possible in the final product
+Experience the ultimate convenience with full-stack chair store website. Browse through  wide selection of products and easily place online orders. user-friendly interface allows you to sign up, add items to your cart, and provide delivery details in just a few clicks. You can also view comprehensive product details and track your order status. Plus, my future plans include enhancing the website with React components for a more responsive and efficient user experience.
 
 ![chairswebsite](https://github.com/adelnasr029/100hr-project/assets/108176783/bb4cd966-e284-4fd1-8921-e6c8928522d0)
 

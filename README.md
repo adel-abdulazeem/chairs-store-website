@@ -22,8 +22,18 @@ How to display the count of the selected items in the cart by using computeCount
 
 
 ## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at some of my work examples:
 
-**Portfolio:** [ adelabdulazeem.netlify.app](https://adelabdulazeem.netlify.app/)
+ [My Portfolio](https://adelabdulazeem.netlify.app/)
 
+ [StarGazers APOD Web App](https://nasa-picture-every-day.netlify.app/)
 
+ [Hair Salon](https://leviathansalon.netlify.app/)
+
+ [Pizzela Restaurant website](https://pizza-restaurant-webdemo.netlify.app/)
+
+ [PlantPicker Project](https://github.com/adelnasr029/PlantPicker)
+
+ [ChatApp](https://github.com/adelnasr029/chatApp)
+ 
+ [Task Tracker](https://github.com/adelnasr029/task-tracker)

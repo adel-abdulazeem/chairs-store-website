@@ -1,4 +1,4 @@
-# My Awesome Project
+# Comfor Chairs Co website
 Experience the ultimate convenience with full-stack chair store website. Browse through  wide selection of products and easily place online orders. user-friendly interface allows you to sign up, add items to your cart, and provide delivery details in just a few clicks. You can also view comprehensive product details and track your order status. Plus, my future plans include enhancing the website with React components for a more responsive and efficient user experience.
 
 ![chairswebsite](https://github.com/adelnasr029/100hr-project/assets/108176783/bb4cd966-e284-4fd1-8921-e6c8928522d0)
@@ -22,8 +22,18 @@ How to display the count of the selected items in the cart by using computeCount
 
 
 ## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at some of my work examples:
 
-**Portfolio:** [ adelabdulazeem.netlify.app](https://adelabdulazeem.netlify.app/)
+ [My Portfolio](https://adelabdulazeem.netlify.app/)
 
+ [StarGazers APOD Web App](https://nasa-picture-every-day.netlify.app/)
 
+ [Hair Salon](https://leviathansalon.netlify.app/)
+
+ [Pizzela Restaurant website](https://pizza-restaurant-webdemo.netlify.app/)
+
+ [PlantPicker Project](https://github.com/adelnasr029/PlantPicker)
+
+ [ChatApp](https://github.com/adelnasr029/chatApp)
+ 
+ [Task Tracker](https://github.com/adelnasr029/task-tracker)

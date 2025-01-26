@@ -14,7 +14,8 @@ const menuSchema = new mongoose.Schema({
     detail: {
         type: String
     }
-}, {
+}, 
+{
     collection: "menuItems"
 })
 

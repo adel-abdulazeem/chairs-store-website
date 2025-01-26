@@ -7,6 +7,9 @@ const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
+const cron = require("node-cron");
+
+
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const menuRoute = require('./routes/menu')
@@ -61,6 +64,25 @@ app.use('/menu', menuRoute)
 app.use('/cart', cartRoute)
 app.use('/order', orderRoute)
 app.use('/submitOrder', submitOrderRoute)
+
+// Function to check server health
+const checkServerHealth = async () => {
+  try {
+    const response = await fetch(`https://chairs-store-website.onrender.com/menu/showDetails/6686821a03a9150ac85d47ba`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log("Server health check successful:", data);
+  } catch (error) {
+    console.error("Server health check failed:", error.message);
+  }
+};
+// Schedule health check every 5 minutes
+cron.schedule("*/5 * * * *", () => {
+  console.log("Running health check...");
+  checkServerHealth();
+});
 //Server Running
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");

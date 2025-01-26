@@ -20,7 +20,7 @@ module.exports = {
     },
     addToCart: async (req,res) => {
       try{
-
+// console.log(req)
         const item = await MenuItems.findOne({name: req.params.name}).lean();
         const newItem =  new CartItems({
           name: item.name,

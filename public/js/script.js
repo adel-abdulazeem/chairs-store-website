@@ -24,7 +24,6 @@ function checkForError() {
 
 // function that inserts data in the modal or Pop-Up window
   async function showDetails(id){
-    console.log(id)
     try{
       document.querySelector('#detailImage').innerHTML = ''
         const response = await fetch(`/menu/showDetails/${id}`)
